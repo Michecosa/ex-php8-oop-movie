@@ -1,5 +1,6 @@
 <?php
 
+require_once __DIR__ . "/Traits/Priceable.php";
 class Genre
 {
   public $name;
@@ -19,12 +20,15 @@ class Movie
   public array $genre;
   private $rating;
 
-  public function __construct($_title, $_director, $_releaseYear, array $_genre)
+  use Priceable;
+
+  public function __construct($_title, $_director, $_releaseYear, array $_genre, $_price=0)
   {
     $this->title = $_title;
     $this->director = $_director;
     $this->releaseYear = $_releaseYear;
     $this->genre = $_genre;
+    $this->price = $_price;
   }
 
   public function getRating()
