@@ -1,50 +1,9 @@
 <?php
 
 require_once __DIR__ . "/Traits/Priceable.php";
-class Genre
-{
-  public $name;
-  public $description;
+require_once __DIR__ . "/Models/Movie.php";
+require_once __DIR__ . "/Models/Genre.php";
 
-  public function __construct($_name, $_description)
-  {
-    $this->name = $_name;
-    $this->description = $_description;
-  }
-}
-class Movie
-{
-  public $title;
-  public $director;
-  public $releaseYear;
-  public array $genre;
-  private $rating;
-
-  use Priceable;
-
-  public function __construct($_title, $_director, $_releaseYear, array $_genre, $_price=0)
-  {
-    $this->title = $_title;
-    $this->director = $_director;
-    $this->releaseYear = $_releaseYear;
-    $this->genre = $_genre;
-    $this->price = $_price;
-  }
-
-  public function getRating()
-  {
-    return $this->rating;
-  }
-
-  public function setRating($_rating)
-  {
-    if ($_rating >= 1 && $_rating <= 5) {
-      $this->rating = $_rating;
-    } else {
-      $this->rating = null;
-    }
-  }
-}
 ?>
 
 <!DOCTYPE html>
