@@ -11,4 +11,8 @@ trait Priceable {
       $this->price = $newPrice;
     }
   }
+
+  public function getPrice() {
+    return $this->price;
+  }
 }

@@ -16,7 +16,7 @@ class Movie
     $this->director = $_director;
     $this->releaseYear = $_releaseYear;
     $this->genre = $_genre;
-    $this->price = $_price;
+    $this->setPrice($_price);
   }
 
   public function getRating()
