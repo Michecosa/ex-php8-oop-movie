@@ -1,8 +1,8 @@
 <?php
 
 require_once __DIR__ . "/Traits/Priceable.php";
-require_once __DIR__ . "/Models/Movie.php";
 require_once __DIR__ . "/Models/Genre.php";
+require_once __DIR__ . "/Models/Movie.php";
 
 ?>
 
