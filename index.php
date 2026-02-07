@@ -16,10 +16,10 @@ class Movie
   public $title;
   public $director;
   public $releaseYear;
-  public $genre;
+  public array $genre;
   private $rating;
 
-  public function __construct($_title, $_director, $_releaseYear, Genre $_genre)
+  public function __construct($_title, $_director, $_releaseYear, array $_genre)
   {
     $this->title = $_title;
     $this->director = $_director;
@@ -60,10 +60,10 @@ class Movie
   $drama = new Genre("Drammatico", "Narrazioni focalizzate sullo sviluppo dei personaggi e su temi emotivi profondi.");
   $scifi = new Genre("Sci-Fi", "Storie basate su concetti scientifici speculativi, futuro e tecnologia avanzata.");
 
-  $myFirstMovie = new Movie("La vita è Bella", "Roberto Benigni", 1997, $drama);
+  $myFirstMovie = new Movie("La vita è Bella", "Roberto Benigni", 1997, [$drama, $commedy]);
   var_dump($myFirstMovie);
-  $mySecondtMovie = new Movie("Inception", "Christopher Nolan", 2010, $scifi);
-  var_dump($mySecondtMovie);
+  $mySecondMovie = new Movie("Inception", "Christopher Nolan", 2010, [$scifi]);
+  var_dump($mySecondMovie);
 
   ?>
 
