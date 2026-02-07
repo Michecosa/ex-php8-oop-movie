@@ -34,8 +34,10 @@ class Movie
 
   public function setRating($_rating)
   {
-    if ($_rating < 1 || $_rating > 5) {
-      echo "The rating must be a value between 1 and 5";
+    if ($_rating >= 1 && $_rating <= 5) {
+      $this->rating = $_rating;
+    } else {
+      $this->rating = null;
     }
   }
 }
